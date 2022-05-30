@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('')
+    return render(request, 'imageGram/base.html')
 # Create your views here.
