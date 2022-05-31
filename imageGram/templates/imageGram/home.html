@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container ">
   <div class="row">
-    <h2>Anime</h2>
+    <h2 class="text-muted mt-4" >Anime</h2>
     {% for picture in images %}
     {% if picture.category.name == "anime" %}
     <div class="col col-lg-4  text-align-center">
@@ -19,9 +19,16 @@
           </div>
           <div class="modal-body">
             <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+            <small>
+              <p class="text-muted text-end">date posted {{ picture.created }}</p>
+            </small>
           </div>
           <div class="modal-footer justify-content-start">
-            <small>{{ picture.description }}</small>
+            <small>{{ picture.description }}</small> <br>
+            <div class="text-end">
+              <input type="text" value="{{picture.image.url}}" id="myInput">
+              <button class="btn btn-primary" onclick="myFunction()">Copy link</button>
+            </div>
           </div>
         </div>
       </div>
@@ -29,7 +36,7 @@
     {% endif %}
     {% endfor %}
     <br>
-    <h2>Landscape</h2>
+    <h2 class="text-muted mt-4">Landscape</h2>
     {% for picture in images %}
     {% if picture.category.name == "landscape" %}
     <div class="col col-lg-4  text-align-center">
@@ -46,9 +53,16 @@
           </div>
           <div class="modal-body">
             <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+            <small>
+              <p class="text-muted text-end">date posted {{ picture.created }}</p>
+            </small>
           </div>
           <div class="modal-footer justify-content-start">
-            <small>{{ picture.description }}</small>
+            <small>{{ picture.description }}</small> <br>
+            <div class="text-end">
+              <input type="text" value="{{picture.image.url}}" id="myInput">
+              <button class="btn btn-primary" onclick="myFunction()">Copy link</button>
+            </div>
           </div>
         </div>
       </div>
@@ -56,7 +70,7 @@
     {% endif %}
     {% endfor %}
     <br>
-    <h2>Animals</h2>
+    <h2 class="text-muted pb-1 mt-4">Animals</h2>
     {% for picture in images %}
     {% if picture.category.name == "animals" %}
     <div class="col col-lg-4  text-align-center">
@@ -69,15 +83,21 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">{{picture.name}}</h5>
+
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+            <small>
+              <p class="text-muted text-end">date posted {{ picture.created }}</p>
+            </small>
           </div>
           <div class="modal-footer justify-content-start">
-            <small>{{ picture.description }}</small>
-            <input type="text" value="Hello World" id="myInput">
-            <button onclick="myFunction()">Copy text</button>
+            <small>{{ picture.description }}</small> <br>
+            <div class="text-end">
+              <input type="text" value="{{picture.image.url}}" id="myInput">
+              <button class="btn btn-primary" onclick="myFunction()">Copy link</button>
+            </div>
           </div>
         </div>
       </div>
