@@ -1,6 +1,15 @@
 from django.db import models
+from  cloudinary.models import CloudinaryField
 
+class Location(models.Model):
+        name = models.CharField(max_length=200)
+        def __str__(self):
+            return self.name
 
+class Category(models.Model):
+        name = models.CharField(max_length=200)
+        def __str__(self):
+            return self.name
 
 class Image(models.Model):
         name = models.CharField(max_length=200)
@@ -11,16 +20,5 @@ class Image(models.Model):
         created = models.DateTimeField(auto_now_add=True)
         class Meta:
             ordering = ['-created']
-        def __str__(self):
-            return self.name
-
-
-class Location(models.Model):
-        name = models.CharField(max_length=200)
-        def __str__(self):
-            return self.name
-
-class Category(models.Model):
-        name = models.CharField(max_length=200)
         def __str__(self):
             return self.name
