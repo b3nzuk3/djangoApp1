@@ -16,11 +16,11 @@
       <div class="">
         <a style="font-size:2.5rem;" class="navbar-brand" href="#"><i style="color:#FBCB0A;" class="fas fa-bomb favicon fa-beat"></i>bombs<span style="color:#590696;">bay</span></a>
       </div>
-      <form class="" action="index.html" method="post">
+      <form class="" action="{% url 'image-search' %}" method="get">
         <div class="container h-100">
           <div class="d-flex justify-content-end h-100">
             <div class="searchbar">
-              <input class="search_input" type="text" name="" placeholder="Search...">
+              <input class="search_input" type="text" name="search" placeholder="Search...">
               <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
             </div>
           </div>
