@@ -1,11 +1,12 @@
 {% extends 'imageGram/base.html' %}
 {% block content %}
-<div class="container">
-  {% for picture in images %}
-  <div class="">
-    <img class="home" src="{{picture.image.url }}" alt="">
+<div class="container ">
+  <div class="row">
+    {% for picture in images %}
+    <div class="col col-lg-4  text-align-center">
+      <img class="image" style="width:20rem; height:17rem;" src="{{picture.image.url }}" alt="">
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-
 </div>
 {% endblock %}

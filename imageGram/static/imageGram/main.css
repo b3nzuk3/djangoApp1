@@ -1,3 +1,7 @@
+.image{
+  margin:10px;
+}
+
 .navbar{
   background-color: #37E2D5;
 }
@@ -46,3 +50,5 @@
   color: white;
   text-decoration: none;
 }
+
+/* HOME PAGE STYLLING */
