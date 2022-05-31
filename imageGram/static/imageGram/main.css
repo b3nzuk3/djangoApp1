@@ -2,6 +2,14 @@
   margin:10px;
 }
 
+.image:hover{
+  cursor: pointer;
+}
+
+h2{
+font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
 .navbar{
   background-color: #37E2D5;
 }
@@ -52,3 +60,7 @@
 }
 
 /* HOME PAGE STYLLING */
+
+section{
+  padding:50px;
+}

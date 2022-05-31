@@ -2,10 +2,87 @@
 {% block content %}
 <div class="container ">
   <div class="row">
+    <h2>Anime</h2>
     {% for picture in images %}
+    {% if picture.category.name == "anime" %}
     <div class="col col-lg-4  text-align-center">
-      <img class="image" style="width:20rem; height:17rem;" src="{{picture.image.url }}" alt="">
+      <img data-bs-toggle="modal" data-bs-target="#mymodal{{picture.id}}" class="image" style="width:22.5rem; height:17rem;" src="{{picture.image.url }}" alt="">
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mymodal{{picture.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{picture.name}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+          </div>
+          <div class="modal-footer justify-content-start">
+            <small>{{ picture.description }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <h2>Landscape</h2>
+    {% for picture in images %}
+    {% if picture.category.name == "landscape" %}
+    <div class="col col-lg-4  text-align-center">
+      <img data-bs-toggle="modal" data-bs-target="#mymodal{{picture.id}}" class="image" style="width:22.5rem; height:17rem;" src="{{picture.image.url }}" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mymodal{{picture.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{picture.name}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+          </div>
+          <div class="modal-footer justify-content-start">
+            <small>{{ picture.description }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <h2>Animals</h2>
+    {% for picture in images %}
+    {% if picture.category.name == "animals" %}
+    <div class="col col-lg-4  text-align-center">
+      <img data-bs-toggle="modal" data-bs-target="#mymodal{{picture.id}}" class="image" style="width:22.5rem; height:17rem;" src="{{picture.image.url }}" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mymodal{{picture.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{picture.name}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img style="height:30rem; width:47.9rem;" src="{{ picture.image.url }}" alt="">
+          </div>
+          <div class="modal-footer justify-content-start">
+            <small>{{ picture.description }}</small>
+            <input type="text" value="Hello World" id="myInput">
+            <button onclick="myFunction()">Copy text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
