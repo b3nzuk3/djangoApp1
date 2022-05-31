@@ -1,4 +1,11 @@
 {% extends 'imageGram/base.html' %}
 {% block content %}
-<h1>hello world</h1>
+<div class="container">
+  {% for picture in images %}
+  <div class="">
+    <img class="home" src="{{picture.image.url }}" alt="">
+  </div>
+  {% endfor %}
+
+</div>
 {% endblock %}
