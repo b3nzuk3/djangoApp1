@@ -6,7 +6,7 @@ class Image(models.Model):
         name = models.CharField(max_length=200)
         location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True)
         category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
-        picture = CloudinaryField('picture')
+        image = CloudinaryField('image')
         description = models.TextField(null=True, blank=True)
         created = models.DateTimeField(auto_now_add=True)
         class Meta:
